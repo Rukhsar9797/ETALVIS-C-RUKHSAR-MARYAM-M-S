@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int n, temp, first, last, place = 1;
+
+    printf("Enter number: ");
+    scanf("%d", &n);
+
+    last = n % 10;
+
+    // find first digit and its place value
+    temp = n;
+    while (temp >= 10) {
+        temp = temp / 10;
+        place = place* 10;
+    }
+    first = temp;
+
+    // check last digit
+    if (last % 2 == 0) {
+        printf("Result: %d", n);
+    } else {
+        first = first - 1;
+        n = n % place;               // remove first digit
+        printf("Result: %d%d", first, n);
+    }
+
+    return 0;
+}
