@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int i=10,a,b,c;
+    while(i<=99){
+        if(i%2 ==0){
+            a=i/10;
+            b=i%10;
+            c=a+b;
+            if(c==6){
+                printf("%d\n",i);
+            }
+            
+        }
+        i++;
+    }
+
+    return 0;
+}
