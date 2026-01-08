@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+	int num, i = 2,a,b,newnum;
+
+	scanf("%d", &num);
+	 a=num%10;
+	 b=(num/10)%10;
+	 newnum=b*10+a;
+
+	if (newnum <= 1) {
+		printf("Not Prime");
+		return 0;
+	}
+
+	while (i <= newnum / 2) {
+		if (newnum % i == 0) {
+			printf("Not Prime");
+			return 0;
+		}
+		i++;
+	}
+
+	printf("Prime");
+	return 0;
+}
+
