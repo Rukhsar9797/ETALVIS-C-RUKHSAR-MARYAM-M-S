@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, x, y, gcd, lcm;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    x = a;  // keep originals for LCM
+    y = b;
+
+    // calculate GCD
+    while (x != y) {
+        if (x > y) {
+            x = x - y;
+        } else {
+            y = y - x;
+        }
+    }
+
+    gcd = x;  // or y, both same
+
+    // calculate LCM
+    lcm = (a * b) / gcd;
+
+    printf("LCM of %d and %d is %d\n", a, b, lcm);
+
+    return 0;
+}
