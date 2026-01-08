@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int num = 1, temp, digit, count = 0, sum;
+
+    while (num < 100000) {
+        temp = num;  // use temp to calculate sum
+        sum = 0;     // reset sum for each number
+
+        while (temp != 0) {
+            sum = sum + (temp % 10);
+            temp = temp / 10;
+        }
+
+        if (sum == 14) {
+            count++;
+        }
+
+        num++;
+    }
+
+    printf("Total numbers with sum of digits 14: %d\n", count);
+
+    return 0;
+}
+
+            num = num/ 10;
+        }
+
+        if (sum == 14) {
+            count++;
+        }
+
+        num++;
+    }
+
+    printf("Total numbers with sum of digits 14: %d\n", count);
+
+    return 0;
+}
