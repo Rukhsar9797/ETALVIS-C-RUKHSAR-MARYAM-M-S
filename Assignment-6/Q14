@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n, temp, first, last, p = 1;
+
+    printf("Enter number: ");
+    scanf("%d", &n);
+
+    last = n % 10;
+    temp = n;
+
+    // find first digit and its place value
+    while (temp >= 10) {
+        temp = temp / 10;
+        p = p * 10;
+    }
+
+    first = temp;
+
+    // remove first and last digit
+    n = n % p;
+    n = n / 10;
+
+    // print swapped number
+    printf("Result: %d%d%d", last, n, first);
+
+    return 0;
+}
