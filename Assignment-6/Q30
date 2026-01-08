@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, x, y, hcf;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    x = a;  // copy originals
+    y = b;
+
+    while (x != y) {
+        if (x > y) {
+            x = x - y;
+        } else {
+            y = y - x;
+        }
+    }
+
+    hcf = x;  // or y
+
+    printf("HCF of %d and %d is %d\n", a, b, hcf);
+
+    return 0;
+}
+
